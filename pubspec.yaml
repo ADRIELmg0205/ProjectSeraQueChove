@@ -24,8 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   http: 
-  flutter_dotenv: 5.0.2
-  flutter_typeahead: 4.3.8
+  flutter_dotenv: 
+  flutter_typeahead: 
   sqflite:
   path:
   sqflite_common_ffi:

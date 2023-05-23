@@ -8,7 +8,7 @@ class PrevisaoService {
   final String baseUrlAPI = 'dataservice.accuweather.com';
   final String path =
       '/forecasts/v1/hourly/12hour/${CidadeController.instancia.cidadeEscolhida!.codigo}';
-      //'/forecasts/v1/hourly/12hour/${dotenv.env["CITY_CODE"]}';
+  //'/forecasts/v1/hourly/12hour/${dotenv.env["CITY_CODE"]}';
   final Map<String, String> params = {
     'apikey': dotenv.env['API_KEY']!,
     'language': 'pt-BR',
