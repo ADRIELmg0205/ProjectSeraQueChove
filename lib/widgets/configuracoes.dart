@@ -84,7 +84,7 @@ class _ConfiguracoesState extends State<Configuracoes> {
                       Padding(padding: EdgeInsets.all(20)),
                       Image(
                         image: AssetImage('images/loading.gif'),
-                        width: 50,
+                        width: 200,
                       )
                     ],
                   )

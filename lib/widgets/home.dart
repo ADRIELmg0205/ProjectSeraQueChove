@@ -37,7 +37,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('Vidente'),
+          title: Text('Sera Que Chove?',
+          style: TextStyle(fontSize: 30),),
           centerTitle: true,
           leading: GestureDetector(
             onTap: () {

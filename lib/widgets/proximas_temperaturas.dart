@@ -8,10 +8,14 @@ class ProximasTemperaturas extends StatelessWidget {
 
   Card criarCardPrevisao(int i) {
     return Card(
+     // color: Colors.transparent,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Image(image: AssetImage('images/${previsoes[i].numeroIcone}.png')),
+          Image(image: AssetImage('images/${previsoes[i].numeroIcone}.png'),
+              width: 50, // Defina a largura desejada
+              height: 50, // Defina a altura desejada
+              ),
           Padding(padding: EdgeInsets.all(2)),
           Text(previsoes[i].horario),
           Padding(padding: EdgeInsets.all(5)),

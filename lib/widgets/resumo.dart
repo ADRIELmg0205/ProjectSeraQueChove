@@ -21,7 +21,27 @@ class Resumo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+     String tempo;
+    if (numeroIcone < 6) {
+    tempo = 'sol';
+     } else if (numeroIcone >= 6 && numeroIcone <= 11) {
+    tempo = 'nublado';
+    } else if (numeroIcone >= 12 && numeroIcone <= 29) {
+    tempo = 'chuva';
+    } else if (numeroIcone >= 30 && numeroIcone <= 38) {
+    tempo = 'noite';
+    } else {
+    tempo = 'chuva';
+    }
+    return Container(
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        opacity: 0.5,
+        image: AssetImage('images/$tempo.png',), // Substitua 'background_image.png' pelo caminho da sua imagem de fundo.
+        fit: BoxFit.cover,
+      ),
+    ),
+    child: Column(
       children: [
         Padding(padding: EdgeInsets.all(5)),
         Row(
@@ -42,18 +62,22 @@ class Resumo extends StatelessWidget {
         ),
         Text(
           cidade,
-          style: TextStyle(fontSize: 18),
+          style: TextStyle(fontSize: 30),
         ),
+        
         Padding(padding: EdgeInsets.all(5)),
         IntrinsicHeight(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image(image: AssetImage('images/$numeroIcone.png')),
+              Image(image: AssetImage('images/principal/$numeroIcone.png',),
+              width: 120, // Defina a largura desejada
+              height: 120, // Defina a altura desejada
+              ),
               Padding(padding: EdgeInsets.all(2)),
               Text(
                 '${temperaturaAtual.toStringAsFixed(0)} ºC',
-                style: TextStyle(fontSize: 40),
+                style: TextStyle(fontSize: 70),
               ),
               VerticalDivider(
                 color: Colors.black,
@@ -62,8 +86,10 @@ class Resumo extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('${temperaturaMaxima.toStringAsFixed(0)} ºC'),
-                  Text('${temperaturaMinima.toStringAsFixed(0)} ºC'),
+                  Text('${temperaturaMaxima.toStringAsFixed(0)} ºC',
+                  style: TextStyle(fontSize: 25),),
+                  Text('${temperaturaMinima.toStringAsFixed(0)} ºC',
+                  style: TextStyle(fontSize: 25),),
                 ],
               ),
             ],
@@ -72,9 +98,12 @@ class Resumo extends StatelessWidget {
         Padding(padding: EdgeInsets.all(10)),
         Text(
           descricao,
-          style: TextStyle(fontSize: 16),
+          style: TextStyle(fontSize: 25),
         ),
+        const SizedBox(height: 100),
       ],
+      
+    ),
     );
   }
 }
