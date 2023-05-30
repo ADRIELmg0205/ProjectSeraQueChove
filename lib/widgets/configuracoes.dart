@@ -41,8 +41,23 @@ class _ConfiguracoesState extends State<Configuracoes> {
       ),
       body: Container(
         padding: EdgeInsets.fromLTRB(16, 60, 16, 0),
+        decoration: BoxDecoration(
+        image: DecorationImage(
+          opacity: 0.5,
+          image: AssetImage('images/nublado.png',), // Substitua 'background_image.png' pelo caminho da sua imagem de fundo.
+          fit: BoxFit.cover,
+          ),
+        ),
         child: Column(
           children: [
+            Text(
+            "Sera Que Chove?", // Texto adicionado
+            style: TextStyle(
+              fontSize: 100,
+              //fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 100),
             TypeAheadField<Cidade>(
               textFieldConfiguration: TextFieldConfiguration(
                 decoration: InputDecoration(
