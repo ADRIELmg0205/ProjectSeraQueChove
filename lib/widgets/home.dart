@@ -101,6 +101,12 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton.extended(
+          onPressed: () {
+            atualizarPrevisoes();
+          },
+          icon: const Icon(Icons.refresh),
+          label: const Text("Atualizar Previsão")),
     );
   }
 }
