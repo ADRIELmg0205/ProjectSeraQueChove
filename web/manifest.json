@@ -1,6 +1,6 @@
 {
-    "name": "vidente_app",
-    "short_name": "vidente_app",
+    "name": "sera_que_chove",
+    "short_name": "sera_que_chove",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

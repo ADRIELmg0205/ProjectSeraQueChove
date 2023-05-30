@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:vidente_app/controllers/cidade_controller.dart';
-import 'package:vidente_app/models/cidade.dart';
-import 'package:vidente_app/models/previsao_hora.dart';
-import 'package:vidente_app/services/previsao_service.dart';
-import 'package:vidente_app/widgets/configuracoes.dart';
-import 'package:vidente_app/widgets/proximas_temperaturas.dart';
-import 'package:vidente_app/widgets/resumo.dart';
+import 'package:sera_que_chove/controllers/cidade_controller.dart';
+import 'package:sera_que_chove/models/cidade.dart';
+import 'package:sera_que_chove/models/previsao_hora.dart';
+import 'package:sera_que_chove/services/previsao_service.dart';
+import 'package:sera_que_chove/widgets/configuracoes.dart';
+import 'package:sera_que_chove/widgets/proximas_temperaturas.dart';
+import 'package:sera_que_chove/widgets/resumo.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -37,8 +37,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('Sera Que Chove?',
-          style: TextStyle(fontSize: 30),),
+          title: Text(
+            'Sera Que Chove?',
+            style: TextStyle(fontSize: 30),
+          ),
           centerTitle: true,
           leading: GestureDetector(
             onTap: () {
@@ -47,7 +49,7 @@ class _HomeState extends State<Home> {
               );
             },
             child: Icon(
-              Icons.settings, // add custom icons also
+              Icons.arrow_back_outlined, // add custom icons also
             ),
           )),
       body: RefreshIndicator(

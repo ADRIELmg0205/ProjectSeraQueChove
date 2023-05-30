@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:vidente_app/models/cidade.dart';
+import 'package:sera_que_chove/models/cidade.dart';
 
 import 'package:path/path.dart';
 import 'package:sqflite_common/sqlite_api.dart';
@@ -15,11 +15,12 @@ class CidadeController extends ChangeNotifier {
      * Tem que executar esse trem aqui
      */
     WidgetsFlutterBinding.ensureInitialized();
-   //databaseFactory = databaseFactoryFfi;
+    //databaseFactory = databaseFactoryFfi;
     sqfliteFfiInit();
     var databaseFactory = databaseFactoryFfi;
     database = await databaseFactory.openDatabase(inMemoryDatabasePath);
-    database.execute('CREATE TABLE cidades (id INTEGER PRIMARY KEY, codigo TEXT, nome TEXT, estado TEXT, siglaEstado TEXT)');
+    database.execute(
+        'CREATE TABLE cidades (id INTEGER PRIMARY KEY, codigo TEXT, nome TEXT, estado TEXT, siglaEstado TEXT)');
     // this.database = openDatabase(join(await getDatabasesPath(), 'vidente3.db'),
     //     version: 1, onCreate: (db, version) {
     //   return db.execute(

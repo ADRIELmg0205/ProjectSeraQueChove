@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.vidente_app">
+    package="com.example.sera_que_chove">
    <application
-        android:label="vidente_app"
+        android:label="sera_que_chove"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

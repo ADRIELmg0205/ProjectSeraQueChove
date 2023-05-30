@@ -7,13 +7,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:vidente_app/widgets/vidente_app.dart';
-import 'package:vidente_app/main.dart';
+import 'package:sera_que_chove/widgets/sera_que_chove.dart';
+import 'package:sera_que_chove/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(VidenteApp());
+    await tester.pumpWidget(SeraQueChove());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

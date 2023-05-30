@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:vidente_app/controllers/cidade_controller.dart';
-import 'package:vidente_app/models/cidade.dart';
+import 'package:sera_que_chove/controllers/cidade_controller.dart';
+import 'package:sera_que_chove/models/cidade.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart';
 

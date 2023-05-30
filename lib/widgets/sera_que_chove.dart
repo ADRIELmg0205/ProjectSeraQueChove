@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:vidente_app/controllers/cidade_controller.dart';
-import 'package:vidente_app/controllers/tema_controller.dart';
-import 'package:vidente_app/widgets/configuracoes.dart';
-import 'package:vidente_app/widgets/home.dart';
+import 'package:sera_que_chove/controllers/cidade_controller.dart';
+import 'package:sera_que_chove/controllers/tema_controller.dart';
+import 'package:sera_que_chove/widgets/configuracoes.dart';
+import 'package:sera_que_chove/widgets/home.dart';
 
-class VidenteApp extends StatelessWidget {
+class SeraQueChove extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: TemaController.instancia,
       builder: (context, child) {
         return MaterialApp(
-            title: 'Vidente',
+            title: 'Será Que Chove?',
             theme: TemaController.instancia.usarTemaEscuro!
                 ? ThemeData.dark()
                 : ThemeData.light(),
