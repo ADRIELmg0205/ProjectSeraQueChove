@@ -5,6 +5,7 @@ import 'package:sera_que_chove/controllers/cidade_controller.dart';
 import 'package:sera_que_chove/models/cidade.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart';
+import 'package:logger/logger.dart';
 
 class CidadeService {
   final String baseUrlAPI = 'dataservice.accuweather.com';
@@ -14,18 +15,28 @@ class CidadeService {
     'language': 'pt-BR'
   };
 
-  pesquisarCidade(String filtro) async {
-    params['q'] = filtro;
+  Future<void> pesquisarCidade(String filtro) async {
+  var logger = Logger();
 
-    final Response resposta = await get(Uri.https(baseUrlAPI, path, params));
-    if (resposta.statusCode == 200) {
-      Iterable it = await json.decode(resposta.body);
-      Cidade cidade = Cidade.transformarJSON(it.first);
-      CidadeController.instancia.trocarCidade(cidade);
-    } else {
-      throw Exception('Erro ao tentar pesquisar a cidade');
-    }
+  logger.d('Parâmetro filtro: $filtro');
+
+  params['q'] = filtro;
+
+  final Response resposta = await get(Uri.https(baseUrlAPI, path, params));
+
+ //logger.d('URL da API: ${resposta.request.url}');
+  logger.d('Código de status da resposta: ${resposta.statusCode}');
+  logger.d('Corpo da resposta: ${resposta.body}');
+
+  if (resposta.statusCode == 200) {
+    Iterable it = await json.decode(resposta.body);
+    Cidade cidade = Cidade.transformarJSON(it.first);
+    CidadeController.instancia.trocarCidade(cidade);
+  } else {
+    throw Exception('Erro ao tentar pesquisar a cidade');
   }
+}
+
 
   Future<List<Cidade>> recuperarCidades() async {
     final String resposta = await rootBundle.loadString("data/cidades.json");

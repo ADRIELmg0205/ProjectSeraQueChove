@@ -108,7 +108,7 @@ class Resumo extends StatelessWidget {
             descricao,
             style: TextStyle(fontSize: 25),
           ),
-          const SizedBox(height: 100),
+          const SizedBox(height: 150),
         ],
       ),
     );
