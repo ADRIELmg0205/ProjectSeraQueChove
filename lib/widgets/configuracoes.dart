@@ -44,7 +44,7 @@ class _ConfiguracoesState extends State<Configuracoes> {
         decoration: BoxDecoration(
         image: DecorationImage(
           opacity: 0.5,
-          image: AssetImage('images/nublado.png',), // Substitua 'background_image.png' pelo caminho da sua imagem de fundo.
+          image: AssetImage('images/telaconfiguracoes.gif',), // Substitua 'background_image.png' pelo caminho da sua imagem de fundo.
           fit: BoxFit.cover,
           ),
         ),
