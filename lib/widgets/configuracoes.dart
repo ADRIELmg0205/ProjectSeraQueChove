@@ -43,7 +43,7 @@ class _ConfiguracoesState extends State<Configuracoes> {
         padding: EdgeInsets.fromLTRB(16, 60, 16, 0),
         decoration: BoxDecoration(
         image: DecorationImage(
-          opacity: 0.5,
+          opacity: 0.7,
           image: AssetImage('images/telaconfiguracoes.gif',), // Substitua 'background_image.png' pelo caminho da sua imagem de fundo.
           fit: BoxFit.cover,
           ),
