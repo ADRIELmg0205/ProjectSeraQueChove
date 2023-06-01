@@ -21,24 +21,36 @@ class Resumo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String tempo;
-    if (numeroIcone < 6) {
-      tempo = 'sol';
-    } else if (numeroIcone >= 6 && numeroIcone <= 11) {
-      tempo = 'nublado';
+    String fundo;
+    String icone;
+    if (numeroIcone < 3) {
+      fundo = 'sol';
+      icone = 'sol';
+    } else if (numeroIcone >= 3 && numeroIcone <= 6) {
+      fundo = 'sol';
+      icone = 'solnublado';
+    } else if (numeroIcone >= 7 && numeroIcone <= 11) {
+      fundo = 'nublado';
+      icone = 'nublado';
     } else if (numeroIcone >= 12 && numeroIcone <= 29) {
-      tempo = 'chuva';
-    } else if (numeroIcone >= 30 && numeroIcone <= 38) {
-      tempo = 'noite';
+      fundo = 'chuva';
+      icone = 'chuva';
+    } else if (numeroIcone >= 30 && numeroIcone <= 34) {
+      fundo = 'noite';
+      icone = 'noite';
+    } else if (numeroIcone >= 35 && numeroIcone <= 38) {
+      fundo = 'noite';
+      icone = 'noitenublado';
     } else {
-      tempo = 'chuva';
+      fundo = 'chuva';
+      icone = 'chuva';
     }
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
           opacity: 0.5,
           image: AssetImage(
-            'images/$tempo.png',
+            'images/$fundo.png',
           ), // Substitua 'background_image.png' pelo caminho da sua imagem de fundo.
           fit: BoxFit.cover,
         ),
@@ -73,7 +85,7 @@ class Resumo extends StatelessWidget {
               children: [
                 Image(
                   image: AssetImage(
-                    'images/principal/$numeroIcone.png',
+                    'images/principal/$icone.png',
                   ),
                   width: 120, // Defina a largura desejada
                   height: 120, // Defina a altura desejada
