@@ -25,25 +25,25 @@ class Resumo extends StatelessWidget {
     String icone;
     if (numeroIcone < 3) {
       fundo = 'sol';
-      icone = 'sol';
+      icone = 'sol.gif';
     } else if (numeroIcone >= 3 && numeroIcone <= 6) {
       fundo = 'sol';
-      icone = 'solnublado';
+      icone = 'solnublado.png';
     } else if (numeroIcone >= 7 && numeroIcone <= 11) {
       fundo = 'nublado';
-      icone = 'nublado';
+      icone = 'nublado.png';
     } else if (numeroIcone >= 12 && numeroIcone <= 29) {
       fundo = 'chuva';
-      icone = 'chuva';
+      icone = 'chuva.png';
     } else if (numeroIcone >= 30 && numeroIcone <= 34) {
       fundo = 'noite';
-      icone = 'noite';
+      icone = 'noite.png';
     } else if (numeroIcone >= 35 && numeroIcone <= 38) {
       fundo = 'noite';
-      icone = 'noitenublado';
+      icone = 'noitenublado.png';
     } else {
       fundo = 'chuva';
-      icone = 'chuva';
+      icone = 'chuva.png';
     }
     return Container(
       decoration: BoxDecoration(
@@ -85,7 +85,7 @@ class Resumo extends StatelessWidget {
               children: [
                 Image(
                   image: AssetImage(
-                    'images/principal/$icone.png',
+                    'images/principal/$icone',
                   ),
                   width: 120, // Defina a largura desejada
                   height: 120, // Defina a altura desejada
@@ -120,7 +120,7 @@ class Resumo extends StatelessWidget {
             descricao,
             style: TextStyle(fontSize: 25),
           ),
-          const SizedBox(height: 150),
+          const SizedBox(height: 90),
         ],
       ),
     );
