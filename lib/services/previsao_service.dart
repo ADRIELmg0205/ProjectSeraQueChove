@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:sera_que_chove/controllers/cidade_controller.dart';
 import 'package:sera_que_chove/models/previsao_hora.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -11,7 +13,7 @@ class PrevisaoService {
   //'/forecasts/v1/hourly/12hour/${dotenv.env["CITY_CODE"]}';
   final Map<String, String> params = {
     'apikey': dotenv.env['API_KEY']!,
-    'language': 'pt-BR',
+    'language': window.locale.languageCode,
     'metric': 'true'
   };
 

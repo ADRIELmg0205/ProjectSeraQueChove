@@ -3,6 +3,7 @@ import 'package:sera_que_chove/controllers/cidade_controller.dart';
 import 'package:sera_que_chove/models/cidade.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:sera_que_chove/services/cidade_service.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Configuracoes extends StatefulWidget {
   @override
@@ -36,34 +37,37 @@ class _ConfiguracoesState extends State<Configuracoes> {
         CidadeController.instancia.cidadeEscolhida != null;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-            algumaCidadeEscolhida ? "Configurações" : "Escolha uma cidade"),
+        title: Text(algumaCidadeEscolhida
+            ?  AppLocalizations.of(context)!.app_home
+            : AppLocalizations.of(context)!.app_home),
       ),
       body: Container(
         padding: EdgeInsets.fromLTRB(16, 60, 16, 0),
         decoration: BoxDecoration(
-        image: DecorationImage(
-          opacity: 0.7,
-          image: AssetImage('images/telaconfiguracoes.gif',), // Substitua 'background_image.png' pelo caminho da sua imagem de fundo.
-          fit: BoxFit.cover,
+          image: DecorationImage(
+            opacity: 0.7,
+            image: AssetImage(
+              'images/telaconfiguracoes.gif',
+            ), // Substitua 'background_image.png' pelo caminho da sua imagem de fundo.
+            fit: BoxFit.cover,
           ),
         ),
         child: Column(
           children: [
             Text(
-            "Sera Que Chove?", // Texto adicionado
-            style: TextStyle(
-              fontSize: 100,
-              //fontWeight: FontWeight.bold,
+              "Sera Que Chove?", // Texto adicionado
+              style: TextStyle(
+                fontSize: 100,
+                //fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          const SizedBox(height: 100),
+            const SizedBox(height: 100),
             TypeAheadField<Cidade>(
               textFieldConfiguration: TextFieldConfiguration(
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.search),
                   border: OutlineInputBorder(),
-                  hintText: 'Procurar cidade',
+                  hintText: AppLocalizations.of(context)!.msgBusca,
                 ),
               ),
               suggestionsCallback: filtrarCidades,

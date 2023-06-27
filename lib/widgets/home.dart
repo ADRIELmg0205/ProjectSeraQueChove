@@ -8,6 +8,7 @@ import 'package:sera_que_chove/services/previsao_service.dart';
 import 'package:sera_que_chove/widgets/configuracoes.dart';
 import 'package:sera_que_chove/widgets/proximas_temperaturas.dart';
 import 'package:sera_que_chove/widgets/resumo.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -38,7 +39,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
           title: Text(
-            'Sera Que Chove?',
+            AppLocalizations.of(context)!.name,
             style: TextStyle(fontSize: 30),
           ),
           centerTitle: true,

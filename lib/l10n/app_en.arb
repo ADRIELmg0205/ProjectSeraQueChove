@@ -1,0 +1,11 @@
+{
+    "helloWord": "Olá Mundo",
+    "msgBusca":"Search city",
+    "name":"What Chuva",
+    
+    "app_home":"Select City",
+    "idioma":"en-US",
+    "@helloWord":{
+        "description":"Hello"
+    }
+}

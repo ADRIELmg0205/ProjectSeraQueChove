@@ -1,0 +1,14 @@
+{
+    "helloWord": "Olá Mundo",
+ 
+    "msgBusca":"Procurar Cidade:",
+    "name":"Será Que Chove",
+    "app_home":"Selecionar Cidade",
+    
+    
+    
+    
+    "@helloWord":{
+        "description":"Hello"
+    }
+}
