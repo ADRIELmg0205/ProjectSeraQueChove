@@ -1,7 +1,10 @@
 {
     "helloWord": "Olá Mundo",
     "msgBusca":"Search city",
-    "name":"What Chuva",
+    "name":"What a rain?",
+    "update":"Update",
+    "not_city":"no city found",
+    "forecast_error":"error loading forecasts",
     
     "app_home":"Select City",
     "idioma":"en-US",

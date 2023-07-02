@@ -94,7 +94,7 @@ class _HomeState extends State<Home> {
                   ],
                 );
               } else if (snapshot.hasError) {
-                return Text('Erro ao carregar as previsões');
+                return Text(AppLocalizations.of(context)!.forecast_error,);
               }
 
               return CircularProgressIndicator();
@@ -107,7 +107,7 @@ class _HomeState extends State<Home> {
             atualizarPrevisoes();
           },
           icon: const Icon(Icons.refresh),
-          label: const Text("Atualizar Previsão")),
+          label: Text(AppLocalizations.of(context)!.update,)),
     );
   }
 }

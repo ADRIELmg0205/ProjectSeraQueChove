@@ -55,7 +55,7 @@ class _ConfiguracoesState extends State<Configuracoes> {
         child: Column(
           children: [
             Text(
-              "Sera Que Chove?", // Texto adicionado
+              AppLocalizations.of(context)!.name, // Texto adicionado
               style: TextStyle(
                 fontSize: 100,
                 //fontWeight: FontWeight.bold,
@@ -91,7 +91,7 @@ class _ConfiguracoesState extends State<Configuracoes> {
               noItemsFoundBuilder: (context) => Container(
                 child: Center(
                   child: Text(
-                    'Nenhuma cidade encontrada',
+                    AppLocalizations.of(context)!.not_city,
                     style: TextStyle(fontSize: 18),
                   ),
                 ),

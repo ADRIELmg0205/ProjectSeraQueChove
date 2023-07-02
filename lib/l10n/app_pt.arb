@@ -2,9 +2,11 @@
     "helloWord": "Olá Mundo",
  
     "msgBusca":"Procurar Cidade:",
-    "name":"Será Que Chove",
+    "name":"Será Que Chove?",
     "app_home":"Selecionar Cidade",
-    
+    "update":"Atualizar",
+    "not_city":"nenhuma cidade encontrada",
+    "forecast_error":"erro ao carregar previsões",
     
     
     
